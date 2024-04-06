@@ -3,14 +3,77 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --border: 1px solid #ffffff1a;
+}
 body, table, input, button{
     font: 400 16px/140% "Roboto", sans-serif;
 }
 body{
-    
     background-color: #121214;
     color: white;
-
+}
+.container{
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+header{
+    padding: 20px 0;
+}
+form{
+    border: var(--border);
+    border-inline: none;
+    padding: 20px 0;
+}
+fieldset{
+    border: none;
+}
+/*PEGANDO OS PRIMEIROS NIVEIS DE DIV*/
+fieldset > div {
+    display: flex;
+    gap: 12px;
+}
+.input-wrapper{
+    flex: 1;
+    border: var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    font: 400 14px/150% 'Roboto', sans-serif;
+    color: #c4c4cc;
+}
+fieldset legend, section h2{
+    font: 700 16px/140% 'Roboto', sans-serif;
+    color: #e1e1e6;
+    padding-bottom: 16px;
+}
+fieldset button{
+    width: fit-content;
+    color: #00292E;
+    background-color: #F48F56;
+    border-radius: 10px;
+    padding: 7px 20px;
+    border: none;
+    font: 700 12px/24px 'Roboto', sans-serif;
+}
+fieldset button:hover{
+    background-color: #f37c37;
+}
+input{
+    all: unset;
+}
+.lista-participantes{
+    padding: 20px 0;
+}
+.lista-participantes > div{
+    border: var(--border);
+    border-radius: 10px;
+}
+table{
+    border-collapse: collapse;
 }
 table thead{
     font-size: 14px;
@@ -18,11 +81,11 @@ table thead{
 }
 
 thead th,
-tbody tr{
+tbody td{
     padding: 12px 16px;
 }
 tbody td{
-    border-top: 1px solid #ffffff1a;
+    border-top: var(--border);
     font-size: 13px;
     line-height: 15px;
     color: #c4c4cc;
